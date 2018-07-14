@@ -21,6 +21,15 @@ License: (MIT) <https://github.com/tameemsafi/typewriterjs/blob/master/LICENSE>
 Website: <https://safi.me.uk/typewriterjs/>  
 Github: <https://github.com/tameemsafi/typewriterjs>  
 
+
+**jQuery Flip**  
+Copyright (c) 2014 Nattawat Nonsung (author) and Carlos Fagiani Junior  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015 Jemar Jones, Nattawat Nonsung, Razvan Popa and Stijn de Witt  
+License: (MIT) <https://github.com/nnattawat/flip/blob/master/LICENSE>  
+Website: <http://nnattawat.github.io/flip/>  
+Github: <https://github.com/nnattawat/flip>  
+
+
 **CDNJS**  
 Copyright (c) 2011-2017 cdnjs team  
 License: (MIT) <https://github.com/cdnjs/cdnjs/blob/master/LICENSE>  
