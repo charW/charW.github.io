@@ -4,20 +4,26 @@
         <title>Charles's Projects</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Flip/1.1.2/jquery.flip.min.js"></script>
     </head>
     <nav>
         <a href="index.html">Home</a>
         <a class="active" href="projects.html">Projects</a>
     </nav>
-    <body id="projects-pg">
-        <section class="project">
-            <h1>Synchronized Tutoring System</h1>
-            <p class="about-project">
-                Connect tutors and students with concurrent network sessions, each consisting of<br>
-                an instant messaging system and a sequence of virtual blackboards and embedded<br>
-                web browsers that are synchronized in real time across the network.
-            </p>
-            <section class="project-images">
+    <body id="projects-pg" onload="start()">
+        <section class="project" id="project1">
+            <section class="project-intro front">
+                <h1>Synchronized Tutoring System</h1>
+                <a href="https://github.com/charW/Synchronized-Tutoring-System"><img class="icon" src="Icons/github.png"></a>
+                <img class="icon" src="Icons/images.png" onclick="$('#project1').flip(true)">
+                <p class="about-project">
+                    Connect tutors and students with concurrent network sessions, each consisting of<br>
+                    an instant messaging system and a sequence of virtual blackboards and embedded<br>
+                    web browsers that are synchronized in real time across the network.
+                </p>
+            </section>
+            <section class="project-images back">
+                <img class="icon" src="Icons/back.png" onclick="$('#project1').flip(false)">
                 <img class="thumbnail" src="Screenshots/TutoringSystem1.png" onmouseover="display(1, this)">
                 <img class="thumbnail" src="Screenshots/TutoringSystem2.png" onmouseover="display(1, this)">
                 <img class="thumbnail" src="Screenshots/TutoringSystem3.png" onmouseover="display(1, this)">
@@ -26,13 +32,18 @@
                 <img class="display" id="project1-display" src="Screenshots/TutoringSystem1.png">
             </section>
         </section>
-        <section class="project">
-            <h1>Media Note Taker</h1>
-            <p class="about-project">
-                Users can play video/audio files with a built-in multimedia player and take notes<br>
-                that get “bookmarked” along the progress bar.
-            </p>
-            <section class="project-images">
+        <section class="project" id="project2">
+            <section class="project-intro front">
+                <h1>Media Note Taker</h1>
+                <a href="https://github.com/charW/Media-Note-Taker"><img class="icon" src="Icons/github.png"></a>
+                <img class="icon" src="Icons/images.png" onclick="$('#project2').flip(true)">
+                <p class="about-project">
+                    Users can play video or audio files with a built-in multimedia player and take notes<br>
+                    that get “bookmarked” along the progress bar.
+                </p>
+            </section>
+            <section class="project-images back">
+                <img class="icon" src="Icons/back.png" onclick="$('#project2').flip(false)">
                 <img class="thumbnail" src="Screenshots/NoteTaker1.png" onmouseover="display(2, this)">
                 <img class="thumbnail" src="Screenshots/NoteTaker2.png" onmouseover="display(2, this)">
                 <img class="display" id="project2-display" src="Screenshots/NoteTaker1.png">
@@ -48,6 +59,27 @@
                 if (prevImg) prevImg.className = "thumbnail";
                 img.className = "thumbnail-selected";
                 prevImg = img;
+            }
+            
+            function flipProject1() {
+                $("#project1").flip({
+                    forceWidth: true,
+                    forceHeight: true,
+                    trigger: 'manual'
+                });
+            }
+            
+            function flipProject2() {
+                $("#project2").flip({
+                    forceWidth: true,
+                    forceHeight: true,
+                    trigger: 'manaul'
+                });
+            }
+            
+            function start() {
+                flipProject1();
+                flipProject2();
             }
         </script>
     </body>
