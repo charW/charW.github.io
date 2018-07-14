@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Charles's Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
+        <script src="matterDraw.js"></script>
+    </head>
+    <nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+    </nav>
+    <body id="main-pg" onload="start()">
+        <p id="my-name">Hi, my name is Charles Wu!</p>
+        <p id="about-me"></p>
+        <script>
+            const aboutMe = "I'm a third year student at the University of Waterloo, studying Computer Science and Statistics.";
+            
+            function typeAboutMe() {
+                var type = new Typewriter($("#about-me")[0], {
+                    typingSpeed: 30
+                });
+                type.typeString(aboutMe).start();
+            }
+            
+            function start() {
+                setPhysics();
+                typeAboutMe();
+            }
+        </script>
+    </body>
+</html>

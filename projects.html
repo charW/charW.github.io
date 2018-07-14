@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Charles's Projects</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="projects.html">Projects</a>
+    </nav>
+    <body id="projects-pg">
+        <section class="project">
+            <h1>Synchronized Tutoring System</h1>
+            <p class="about-project">
+                Connect tutors and students with concurrent network sessions, each consisting of<br>
+                an instant messaging system and a sequence of virtual blackboards and embedded<br>
+                web browsers that are synchronized in real time across the network.
+            </p>
+            <section class="project-images">
+                <img class="thumbnail" src="Screenshots/TutoringSystem1.png" onmouseover="display(1, this)">
+                <img class="thumbnail" src="Screenshots/TutoringSystem2.png" onmouseover="display(1, this)">
+                <img class="thumbnail" src="Screenshots/TutoringSystem3.png" onmouseover="display(1, this)">
+                <img class="thumbnail" src="Screenshots/TutoringSystem4.png" onmouseover="display(1, this)">
+                <img class="thumbnail" src="Screenshots/TutoringSystem5.png" onmouseover="display(1, this)">
+                <img class="display" id="project1-display" src="Screenshots/TutoringSystem1.png">
+            </section>
+        </section>
+        <section class="project">
+            <h1>Media Note Taker</h1>
+            <p class="about-project">
+                Users can play video/audio files with a built-in multimedia player and take notes<br>
+                that get “bookmarked” along the progress bar.
+            </p>
+            <section class="project-images">
+                <img class="thumbnail" src="Screenshots/NoteTaker1.png" onmouseover="display(2, this)">
+                <img class="thumbnail" src="Screenshots/NoteTaker2.png" onmouseover="display(2, this)">
+                <img class="display" id="project2-display" src="Screenshots/NoteTaker1.png">
+            </section>
+        </section>
+        <script>
+            var prevImg;
+
+            function display(projectNum, img) {
+                if (prevImg == img) return;
+                var name = "#project" + projectNum + "-display";
+                $(name)[0].src = img.src;
+                if (prevImg) prevImg.className = "thumbnail";
+                img.className = "thumbnail-selected";
+                prevImg = img;
+            }
+        </script>
+    </body>
+</html>
